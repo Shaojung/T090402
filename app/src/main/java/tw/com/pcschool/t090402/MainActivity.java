@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         ed = (EditText) findViewById(R.id.editText);
         tv = (TextView) findViewById(R.id.textView);
         sp = getSharedPreferences("mydata", MODE_PRIVATE);
+
+        String value = sp.getString("v1", "Teacher");
+        ed.setText(value);
     }
 
     public void clickSave(View v)
