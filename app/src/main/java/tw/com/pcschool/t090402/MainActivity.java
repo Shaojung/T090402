@@ -1,5 +1,6 @@
 package tw.com.pcschool.t090402;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,9 +35,16 @@ public class MainActivity extends AppCompatActivity {
         editor.commit();
     }
 
-    public void clickLoad(View v)
-    {
+    public void clickLoad(View v) {
         String value = sp.getString("v1", "Teacher");
         tv.setText(value);
     }
+
+    public void clickSetting(View v)
+    {
+        Intent it = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(it);
+    }
+
+
 }
